@@ -1,4 +1,9 @@
 import GameCard from "@/components/GameCard";
+import { AiGameHubLogo } from "@/components/svg/AiGameHubLogo";
+import { GitHubIcon } from "@/components/svg/GithubIcon";
+import { XIcon } from "@/components/svg/XIcon";
+import { ZennIcon } from "@/components/svg/ZennIcon";
+import Link from "next/link";
 import React from "react";
 
 export const HomeScreen: React.FC = () => {
@@ -8,14 +13,15 @@ export const HomeScreen: React.FC = () => {
       name: "Tetris",
       description: "Challenge our AI in a game of Tetris!",
       image: "/images/tetris.png",
-      href: "https://claude.site/artifacts/ddd2502e-baa4-46dd-bd8f-34c89936be71",
+      href: "https://ai-tetris.created.app/",
     },
     {
       id: 2,
-      name: "AI Puzzle Solver",
-      description: "Watch AI solve complex puzzles in real-time!",
-      image: "",
-      href: "",
+      name: "Slot mashine",
+      description:
+        "Experience the thrill of slots like never before with AI Slot Master.",
+      image: "/images/slot-mashine.png",
+      href: "https://claude.site/artifacts/3e9689e3-de09-4ffb-ade1-8d5d5c26196b",
     },
     {
       id: 3,
@@ -31,11 +37,12 @@ export const HomeScreen: React.FC = () => {
       <nav className="bg-white bg-opacity-20 backdrop-blur-lg fixed w-full z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
-              <a href="#" className="text-white text-2xl font-bold">
+            <Link href="#" className="text-white text-2xl font-bold">
+              <div className="flex gap-2 items-center">
+                <AiGameHubLogo />
                 AI Game Hub
-              </a>
-            </div>
+              </div>
+            </Link>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 <a
@@ -103,14 +110,35 @@ export const HomeScreen: React.FC = () => {
           <h2 className="text-3xl font-bold text-white mb-4">Contact</h2>
           <p className="text-white">
             Feel free to reach out to us with any questions or feedback. We
-            would love to hear from you!
+            would love to hear from you! Forms will be coming soon.
           </p>
         </section>
       </main>
 
       <footer className="mt-auto bg-white bg-opacity-20 backdrop-blur-lg py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <p>&copy; 2023 AI Game Hub. All rights reserved.</p>
+          <p>&copy; 2024 AI Game Hub. All rights reserved.</p>
+        </div>
+        <div className="pt-4 flex justify-center space-x-4">
+          <Link
+            href="https://github.com/kiwichan101kg"
+            target="blank"
+            aria-label="GitHub"
+            className="hover:opacity-75"
+          >
+            <GitHubIcon />
+          </Link>
+          <Link
+            href="https://x.com/kiwichan_101kg"
+            target="blank"
+            aria-label="Twitter"
+            className="hover:opacity-75"
+          >
+            <XIcon />
+          </Link>
+          <Link href="#" aria-label="LinkedIn" className="hover:opacity-75">
+            <ZennIcon />
+          </Link>
         </div>
       </footer>
     </div>
